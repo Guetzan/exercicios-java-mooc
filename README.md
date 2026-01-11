@@ -1,4 +1,4 @@
-### Um repositório pra armazenar minhas soluções para os exercícios do Java MOOC.
+### Um repositório para armazenar minhas soluções para os exercícios do Java MOOC.
 Criei esse repositório com o objetivo de conseguir acessar os exercícios pelo meu sistema windows ou linux.
 Então se eu tiver resolvido alguns exercícios pelo windows, basta executar um `git pull` pelo linux e continuar os trabalhos por lá.
 
