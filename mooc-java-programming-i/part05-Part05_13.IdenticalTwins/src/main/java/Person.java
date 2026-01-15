@@ -15,5 +15,20 @@ public class Person {
         this.weight = weight;
     }
 
-    // implement an equals method here for checking the equality of objects
+    public boolean equals(Object compared) {
+        if(this == compared) {
+            return true;
+        }
+        
+        if(!(compared instanceof Person)) {
+            return false;
+        }
+        
+        Person castedPerson = (Person) compared;
+        
+        return this.name.equals(castedPerson.name) &&
+               this.birthday.equals(castedPerson.birthday) &&
+               this.height == castedPerson.height &&
+               this.weight == castedPerson.weight;
+    }
 }

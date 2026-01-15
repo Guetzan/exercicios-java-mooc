@@ -14,6 +14,35 @@ public class Money {
         this.euros = euros;
         this.cents = cents;
     }
+    
+    public Money plus(Money addition) {
+        return new Money(this.euros + addition.euros, this.cents + addition.cents);
+    }
+    
+    public Money minus(Money decreaser) {
+        int euros = this.euros - decreaser.euros;
+        int cents = this.cents - decreaser.cents;
+        
+        if(euros < 0) {
+            return new Money(0, 0);
+        }
+        
+        if(cents < 0) {
+            cents = cents + 100;
+            euros--;
+        }
+        
+        return new Money(euros, cents);
+    }
+    
+    public boolean lessThan(Money compared) {
+        if(this.euros < compared.euros) {
+            return true;
+        } 
+
+        return this.euros == compared.euros &&
+               this.cents < compared.cents;
+    }
 
     public int euros() {
         return this.euros;
@@ -31,5 +60,4 @@ public class Money {
 
         return this.euros + "." + zero + this.cents + "e";
     }
-
 }
